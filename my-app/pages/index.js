@@ -37,9 +37,10 @@ export default function Home() {
 
     // If user is not connected to the Rinkeby network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 4) {
-      window.alert("Change the network to Rinkeby");
-      throw new Error("Change network to Rinkeby");
+    console.log(chainId)
+    if (chainId !== 5) {
+      window.alert("Change the network to goerli testnet");
+      throw new Error("Change network goerli testnet");
     }
 
     if (needSigner) {
